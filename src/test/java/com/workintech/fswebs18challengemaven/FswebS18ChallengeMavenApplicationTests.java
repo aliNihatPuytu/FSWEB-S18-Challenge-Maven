@@ -158,6 +158,7 @@ class FswebS18ChallengeMavenApplicationTests {
 		Card updatedCard = new Card();
 		updatedCard.setId(1L);
 		updatedCard.setType(Type.KING);
+        updatedCard.setColor(Color.HEARTH);
 		given(cardRepository.update(any())).willReturn(updatedCard);
 
 		mockMvc.perform(put("/cards/")
